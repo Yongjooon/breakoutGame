@@ -10,7 +10,7 @@ const Mission1: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
       const API_BASE_URL = import.meta.env.PROD
-  ? '/'
+  ? '/api'
   : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174:81')
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Mission1: React.FC = () => {
     try {
       setLoading(true);
 
-      await fetch(`${API_BASE_URL}/api/words`, {
+      await fetch(`${API_BASE_URL}/words`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

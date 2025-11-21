@@ -19,7 +19,7 @@ const Login: React.FC = () => {
     }
 
     const API_BASE_URL = import.meta.env.PROD
-  ? '/'
+  ? '/api'
   : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174:81')
 
     if (!API_BASE_URL) {
@@ -30,7 +30,7 @@ const Login: React.FC = () => {
     try {
       setLoading(true);
 
-      const res = await fetch(`${API_BASE_URL}/api/login`, {
+      const res = await fetch(`${API_BASE_URL}/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, password }),

@@ -16,7 +16,7 @@ const Start: React.FC = () => {
   const [fetchingWords, setFetchingWords] = useState(false);
 
   const API_BASE_URL = import.meta.env.PROD
-  ? '/'
+  ? '/api'
   : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174:81')
 
   /** 로그인 index 가져오기 */
@@ -35,7 +35,7 @@ const Start: React.FC = () => {
     try {
       setFetchingWords(true);
 
-      const res = await fetch(`${API_BASE_URL}/api/words?index=${userIndex}`);
+      const res = await fetch(`${API_BASE_URL}/words?index=${userIndex}`);
       if (!res.ok) return;
 
       const data: { words: string[] } = await res.json();
@@ -96,7 +96,7 @@ const Start: React.FC = () => {
   const updateWordOnServer = async (position: number, value: string) => {
     if (index == null || !API_BASE_URL) return;
 
-    await fetch(`${API_BASE_URL}/api/words`, {
+    await fetch(`${API_BASE_URL}/words`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ index, position, value }),
