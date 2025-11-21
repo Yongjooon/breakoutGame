@@ -17,7 +17,7 @@ const Start: React.FC = () => {
 
   const API_BASE_URL = import.meta.env.PROD
   ? '/api'
-  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174')
+  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174:81')
 
   /** 로그인 index 가져오기 */
   useEffect(() => {
