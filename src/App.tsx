@@ -49,10 +49,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/start" element={<Start />} />
-          <Route path="/mission1" element={<Mission1 />} />
-          <Route path="/mission2" element={<Mission2 />} />
-          <Route path="/mission3" element={<Mission3 />} />
-          <Route path="/mission4" element={<Mission4 />} />
+          <Route path="/mission15345" element={<Mission1 />} />
+          <Route path="/mission223542452" element={<Mission2 />} />
+          <Route path="/mission33462462" element={<Mission3 />} />
+          <Route path="/mission413451345" element={<Mission4 />} />
         </Routes>
       </div>
     </div>

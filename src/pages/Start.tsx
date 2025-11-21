@@ -15,7 +15,9 @@ const Start: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [fetchingWords, setFetchingWords] = useState(false);
 
-  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string | undefined;
+  const API_BASE_URL = import.meta.env.PROD
+  ? '/api'
+  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174')
 
   /** 로그인 index 가져오기 */
   useEffect(() => {
@@ -68,10 +70,10 @@ const Start: React.FC = () => {
     if (!trimmed) return;
 
     switch (trimmed) {
-      case 'ZoHoEnn': navigate('/mission1'); break;
-      case 'SSaFY': navigate('/mission2'); break;
-      case '취뽀': navigate('/mission3'); break;
-      case '우주최강존잘남한현진': navigate('/mission4'); break;
+      case 'ZoHoEnn': navigate('/mission15345'); break;
+      case 'SSaFY': navigate('/mission223542452'); break;
+      case '취뽀': navigate('/mission33462462'); break;
+      case '우주최강존잘남한현진': navigate('/mission413451345'); break;
 
       case 'a':
         alert('축하합니다! 숨겨진 단어를 찾으셨습니다.');
