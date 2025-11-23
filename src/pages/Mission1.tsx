@@ -9,7 +9,9 @@ const Mission1: React.FC = () => {
   const [answer, setAnswer] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const API_BASE_URL = 'http://3.36.53.174:81';
+      const API_BASE_URL = import.meta.env.PROD
+  ? '/api'
+  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174:81')
 
   useEffect(() => {
     const storedIndex = getUserIndex();
