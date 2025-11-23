@@ -12,12 +12,11 @@ const Start: React.FC = () => {
   const [index, setIndex] = useState<number | null>(null);
   const [words, setWords] = useState<string[]>(INITIAL_WORDS);
   const [inputWord, setInputWord] = useState('');
-  const [loading, setLoading] = useState(false);
   const [fetchingWords, setFetchingWords] = useState(false);
 
-  const API_BASE_URL = import.meta.env.PROD
+const API_BASE_URL = import.meta.env.PROD
   ? '/api'
-  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.36.53.174:81')
+  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.39.195.166')
 
   /** 로그인 index 가져오기 */
   useEffect(() => {

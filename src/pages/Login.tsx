@@ -18,7 +18,9 @@ const Login: React.FC = () => {
       return;
     }
 
-const API_BASE_URL = 'http://3.39.195.166'
+const API_BASE_URL = import.meta.env.PROD
+  ? '/api'
+  : (import.meta.env.VITE_API_BASE_URL ?? 'http://3.39.195.166')
 
     if (!API_BASE_URL) {
       alert('API 서버 주소가 설정되지 않았습니다. VITE_API_BASE_URL를 확인해주세요.');
