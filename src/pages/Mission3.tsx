@@ -61,7 +61,7 @@ const API_BASE_URL = import.meta.env.PROD
 
     const trimmed = answer.trim();
 
-    if (trimmed === '김용준') {
+    if (trimmed === '김현목') {
       alert('정답!');
       await updateWordAndGoStart();
     } else {

@@ -61,7 +61,7 @@ const API_BASE_URL = import.meta.env.PROD
 
     const trimmed = answer.trim();
 
-    if (trimmed === '전경원') {
+    if (trimmed === '뽕나무쟁이 선릉본점 별관') {
       alert('정답!');
       await updateWordAndGoStart();
     } else {
@@ -85,7 +85,7 @@ const API_BASE_URL = import.meta.env.PROD
       <h1 style={{ fontSize: '28px' }}>퀴즈 퀴즈!!</h1>
 
       <div style={{ textAlign: 'center', marginTop: '8px', lineHeight: 1.6 }}>
-        <div>지난 회식 가장 먼저 온 사람 이름은??</div>
+        <div>지난 회식 장소는??</div>
       </div>
 
       <form
